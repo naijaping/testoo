@@ -1,11 +1,11 @@
 <?php
 /*
 
-Plugin Name: WPSIREN Recent Posts By Category
-Description: Adds a Recent Posts By Category Widget @ Widget Dashboard
-Plugin Uri: http://www.wpsiren.com/posts-by-category
+Plugin Name: City Mag Posts By Category Widget
+Description: Show recent posts at the widget which you can filter by Category Widget 
+Plugin Uri: http://www.cityflavourmagazine.com/contact-us
 Author: WPSIREN
-Author Uri: http://www.wpsiren.com
+Author Uri: http://www.cityflavourmagazine.com
 License: GPL
 Version: 1.0.2
 
