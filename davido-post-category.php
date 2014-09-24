@@ -75,7 +75,6 @@ class RPBC_Widget extends WP_Widget {
         $allwComments= $instance['allow_comments'];
         $shwCredits = $instance['show_credits'];
         $commentsText= $instance['no_comments_text'];
-
         $title = apply_filters( 'widget_title', $instance['title'] );  
         echo $before_widget;
         echo "<div class='davoo_widget_inner' style='background:" . $widgtBGColor . ";'>";
@@ -189,9 +188,6 @@ if($TotalComments == '0'){
        endwhile;
                
         echo '</ul>';
-        if($shwCredits == '1'){
-            echo "<div class='davoo-credits'><a href='http://www.cityflavournews.com' title='www.cityflavournews.com'>Powered by CITYMAG</a></div>";
-        }
         wp_reset_query();
         echo "</div>";
         echo $after_widget;  
