@@ -15,19 +15,19 @@ Version: 1.0.2
 
 // Registering the Widget
 
-function register_RPBC_Widget(){
-    register_widget('RPBC_Widget');
+function register_DAVOO_Widget(){
+    register_widget('DAVOO_Widget');
 }
-add_action('widgets_init','register_RPBC_Widget');
+add_action('widgets_init','register_DAVOO_Widget');
 
 // Registering the Style & Enqueue it
 
-function rpbc_style(){
-  wp_register_style('rpbcStyle', plugins_url('wpsiren-recent-posts-by-category-style.css', __FILE__));
-  wp_enqueue_style('rpbcStyle');
+function davoo_style(){
+  wp_register_style('davooStyle', plugins_url('davoo-list-recent-posts-by-category-style.css', __FILE__));
+  wp_enqueue_style('davooStyle');
 }
 
-add_action('wp_enqueue_scripts','rpbc_style');
+add_action('wp_enqueue_scripts','davoo_style');
 
 
 // RPBC Widget Class
