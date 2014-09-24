@@ -4,7 +4,7 @@
 Plugin Name: City Mag Posts By Category Widget
 Description: Show recent posts at the widget which you can filter by Category Widget 
 Plugin Uri: http://www.cityflavourmagazine.com/contact-us
-Author: WPSIREN
+Author: CityMag
 Author Uri: http://www.cityflavourmagazine.com
 License: GPL
 Version: 1.0.2
