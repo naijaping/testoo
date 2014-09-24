@@ -227,7 +227,7 @@ if($TotalComments == '0'){
         $instance['widget_title_text_color'] = $new_instance['widget_title_text_color'];
         $instance['allow_comments'] = (bool)$new_instance['allow_comments'];
         $instance['no_comments_text'] = strip_tags($new_instance['no_comments_text']);
-        $instance['show_credits'] = (bool)$new_instance['show_credits'];
+        
         return $instance;  
     }  
     /** 
