@@ -30,9 +30,9 @@ function davoo_style(){
 add_action('wp_enqueue_scripts','davoo_style');
 
 
-// RPBC Widget Class
+// Davoo Widget Class
 
-class RPBC_Widget extends WP_Widget {  
+class DAVOO_Widget extends WP_Widget {  
     /** 
      * Register widget with WordPress. 
      */  
