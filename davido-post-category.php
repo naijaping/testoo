@@ -454,9 +454,6 @@ if($TotalComments == '0'){
         <label for="<?php echo $this->get_field_id( 'no_comments_text' ); ?>"><?php _e( 'Comments Text:' ); ?></label>  
         <input class="widefat" id="<?php echo $this->get_field_id( 'no_comments_text' ); ?>" name="<?php echo $this->get_field_name( 'no_comments_text' ); ?>" type="text" value="<?php echo esc_attr( $commentsText ); ?>" />  
        </p>
-
-        
-       
 <?php  
 }  
 }
