@@ -64,7 +64,7 @@ class RPBC_Widget extends WP_Widget {
         $iconURI = $instance['icon_uri'];
         $iconWidth = $instance['icon_width'];
         $iconHeight = $instance['icon_height'];
-        $iconImage = "<img class='rpbc_widget_icon' src='" . $iconURI ."' width='" . $iconWidth ."' height='" . $iconHeight . "' alt='" . $title . "'/>";  
+        $iconImage = "<img class='davoo_widget_icon' src='" . $iconURI ."' width='" . $iconWidth ."' height='" . $iconHeight . "' alt='" . $title . "'/>";  
         $imageWidth = $instance['image_width'];
         $imageHeight = $instance['image_height']; 
         $imageFloat = $instance['image_float']; 
@@ -78,7 +78,7 @@ class RPBC_Widget extends WP_Widget {
 
         $title = apply_filters( 'widget_title', $instance['title'] );  
         echo $before_widget;
-        echo "<div class='rpbc_widget_inner' style='background:" . $widgtBGColor . ";'>";
+        echo "<div class='davoo_widget_inner' style='background:" . $widgtBGColor . ";'>";
         if ( ! empty( $title ) )  
             echo $before_title . '<span style="color:' . $widgtTitleColor . ';">' . ( $addIcn == '1' ? '<p class=fixit>' . $iconImage . $title . '</p>' : $title ) . '</span>' . $after_title;
 
@@ -95,7 +95,7 @@ class RPBC_Widget extends WP_Widget {
 
         $latestposts = query_posts('posts_per_page=' . $totalposts . '&category_name=' . $catName);
         }
-        echo '<ul class="rpbc">';
+        echo '<ul class="davoo">';
        
        while( have_posts($latestposts)) : the_post($latestposts); ?>
        
@@ -108,19 +108,19 @@ if($allwImages == '1'){
         
 if ( has_post_thumbnail() ) {
      $thumbnail = get_the_post_thumbnail($latestpost->ID ,array($imageWidth, $imageHeight));
-     echo '<div class="rpbc_thumbnail_' . ($imageFloat == "left" ? "left" : "right") . '">' . $thumbnail . '</div>';
+     echo '<div class="davoo_thumbnail_' . ($imageFloat == "left" ? "left" : "right") . '">' . $thumbnail . '</div>';
 }
 else {
     
       $defaultthumburl = plugins_url('images/thumbnail_default.png', __FILE__);
 
-    echo '<div class="rpbc_thumbnail_' . ($imageFloat == 'left' ? 'left' : 'right') . '"><img src="' . $defaultthumburl . '" width="' . $imageWidth . '" height="' . $imageHeight . '" /></div>';
+    echo '<div class="davoo_thumbnail_' . ($imageFloat == 'left' ? 'left' : 'right') . '"><img src="' . $defaultthumburl . '" width="' . $imageWidth . '" height="' . $imageHeight . '" /></div>';
 }
 
 }
 
 ?>
-        <div class="rpbc_content" style="background:<?php ;?>;">
+        <div class="davoo_content" style="background:<?php ;?>;">
 
         <a style='color: <?php echo $widgtLinkColor; ?>;' href='<?php the_permalink(); ?>'><?php the_title(); ?></a>
 
@@ -164,14 +164,14 @@ $TotalComments = $wpdb->get_var(
 
 if($TotalComments == '0'){
 ?>
-<div class="rpbc_comments_count">
+<div class="davoo_comments_count">
 <a href="<?php the_permalink(); ?>#comments"><?php echo $commentsText; ?></a>
 </div>
 <?php
 
 }else{
 ?>
-<div class="rpbc_comments_count">
+<div class="davoo_comments_count">
 <a href="<?php the_permalink(); ?>#comments"><?php echo $TotalComments . ( $TotalComments > 1 && $TotalComments != 0 ? ' Comments' : ' Comment' ); ?></a> 
 </div>
 <?php
@@ -190,7 +190,7 @@ if($TotalComments == '0'){
                
         echo '</ul>';
         if($shwCredits == '1'){
-            echo "<div class='rpbc-credits'><a href='http://www.wpsiren.com' title='www.wpsiren.com'>Powered by WPSIREN</a></div>";
+            echo "<div class='davoo-credits'><a href='http://www.cityflavournews.com' title='www.cityflavournews.com'>Powered by CITYMAG</a></div>";
         }
         wp_reset_query();
         echo "</div>";
@@ -455,14 +455,7 @@ if($TotalComments == '0'){
         <input class="widefat" id="<?php echo $this->get_field_id( 'no_comments_text' ); ?>" name="<?php echo $this->get_field_name( 'no_comments_text' ); ?>" type="text" value="<?php echo esc_attr( $commentsText ); ?>" />  
        </p>
 
-        <h4 style="margin-bottom:3px">Credits</h4>
-      <p style="font-size:10px">Support us </p>
-       
-      
-      <p>  
-        <input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id( 'show_credits' ); ?>" name="<?php echo $this->get_field_name( 'show_credits' ); ?>" value="1" <?php if(empty($instance['show_credits'])){ echo "checked='checked'"; } ?><?php echo ($instance['show_credits'] == "true" ? "checked='checked'" : ""); ?> />
-        <label for="<?php echo $this->get_field_id( 'show_credits' ); ?>"><?php _e( 'Enable Credits' ); ?></label>  
-       </p>
+        
        
 <?php  
 }  
