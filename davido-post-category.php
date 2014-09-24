@@ -38,11 +38,11 @@ class RPBC_Widget extends WP_Widget {
      */  
     public function __construct() {  
         parent::__construct(  
-            'rpbc', // Base ID  
-            'WPSiren - Recent Posts By Category', // Name  
+            'davoo', // Base ID  
+            'CityMag - List Recent Posts By Category', // Name  
             array( 
-            'classname' => 'widget_rpbc',
-            'description' => __( 'Add Recent Posts By Category', 'wpsiren.com' ) 
+            'classname' => 'widget_davoo',
+            'description' => __( 'List Recent Posts By Category', 'city mag' ) 
             
             ) // Args  
         );  
